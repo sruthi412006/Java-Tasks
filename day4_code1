@@ -1,20 +1,15 @@
 import java.util.Scanner;
-public class Strongnumber{
+public class Harshatnumber{
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
-    int num = sc.nextInt();
-    int temp;
+    int n = sc.nextInt();
     int sum = 0;
-    int original = num;
-    while(num != 0){
-      temp = num%10;
-      int fact = 1;
-      for(int i=1;i<=temp;i++){
-        fact = fact * i;
-      }
-      sum += fact;
-      num = num/10;
+    int num = n;
+    while(n != 0){
+      int digit = n%10;
+      sum += digit;
+      n /= 10;
     }
-    System.out.println(sum == original);
-  }
+    System.out.println(num%sum == 0);
+}
 }
